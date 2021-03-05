@@ -13,6 +13,7 @@
 	{{!-- <link href="/css/bootstrap.css" rel="stylesheet"> --}}
 	{{!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> --}}
 	<link rel="stylesheet" href="/css/styles.css">
+	{{!-- <script src="/js/insert-nav.js"></script>  --}}
 
 	{{> facebook}}
 	<script src="/js/facebook.js"></script>
@@ -34,10 +35,21 @@
         </div> --}}
 
 		{{!-- INSERT NAV BAR HERE --}}
+		{{!-- NAV BAR WOULD NOT LOAD --}}
+		{{!-- TODO: CHECK "/js/insert-nav.js" FOR ERRORS --}}
 		<div class="col insert-nav" align="center">
-			
+			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="fas fa-bars"> </i>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item" href="#">Profile</a></li>
+				<li><a class="dropdown-item" href="#">Log History</a></li>
+				<li><a class="dropdown-item" href="#">Settings</a></li>
+				<li><a class="dropdown-item" href="#">Help</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a class="dropdown-item" href="/">Sign Out</a></li>
+			</ul>
 		</div>
-    </div>
 
 	<div class="row align-items-center">
 		<div class="col"></div>
