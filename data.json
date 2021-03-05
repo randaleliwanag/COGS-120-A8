@@ -1,0 +1,13 @@
+{"log-activity": 
+    {
+        "activity": ["Jog", "Read", "Homework", "Work", "Visit a friend"],
+        "mood": ["Mad", "Sad", "Excited", "Happy", "Indifferent"],
+        "symptom": ["Headache", "Fatigue", "Stress", "None"]
+    },
+"wellness-routine": 
+    {
+        "wellness": ["Exercise", "Read", "Meditate", "Relax", "Stretch"],
+        "supplements": ["Multivitamin", "Protein", "5-HTP", "Magnesium", "B-12"],
+        "medication": ["Ibuprofen", "Xanax"]
+    }
+}

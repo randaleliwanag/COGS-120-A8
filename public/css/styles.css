@@ -1,0 +1,43 @@
+.buttons .row {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-size: 30px;
+    width: 335px;
+}
+
+.title-header .jumbotron .display-4 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.title-header .lead {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: DodgerBlue;
+}
+
+.btn-fb {
+    background-color: #3b5998;
+    color: white;
+}
+
+.act-pressed, .mood-pressed, .symp-pressed {
+    background-color: #80dfff;
+}
+
+.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover {
+    background-color: #e6e6e6;
+}
+
+#add-activity:hover, #add-mood:hover, #add-symptom:hover {
+    background-color: #e6e6e6;
+}

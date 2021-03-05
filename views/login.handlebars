@@ -1,0 +1,63 @@
+<html>
+<head>
+	<html lang="en"></html>
+	<title>Mindful</title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	{{!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> --}}
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/ad7c6dd9ef.js" crossorigin="anonymous"></script>
+	{{!-- <link href="/css/bootstrap.css" rel="stylesheet"> --}}
+	{{!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> --}}
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="title-header">
+			<div class="row">
+				<div class="col-6 offset-3 jumbotron">
+					<h1 class="display-4">Login</h1><br>
+				</div>
+			</div>
+		</div>
+
+		<div class="row justify-content-center mt-0">
+			<form>
+				<div class="form-group col-sm-8 col-md-6 col-lg-4 col-8 mt-3 mx-auto">
+					<label>Email Address</label>
+					<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Email Address">
+				</div>
+				
+				<div class="form-group col-sm-8 col-md-6 col-lg-4 col-8 mt-3 mx-auto">
+					<label>Password</label>
+					<input type="password" class="form-control" id="Password" placeholder="Password">
+				</div>
+
+				{{!-- This should be type="submit"; I set it to type="button" to use 'onclick' --}}
+				<div class="text-center mt-3">
+					<button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index'">Login</button>
+				</div>
+
+				<div class="form-group text-center mt-5">
+					<p>No account? No problem! Sign up <a href='/signup'>here</a>.</p>
+				</div>
+
+				<div class="form-group text-center mt-3">
+					<small class="facebookLogin">Or connect with</small><br>
+					<fb:login-button size="large" scope="public_profile,email" onlogin="checkLoginState();">
+					</fb:login-button>
+				</div>
+			</form>
+		</div>
+
+
+	</div>
+</body>
+</html>
