@@ -44,7 +44,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', login.view)
+app.get('/', splash.view)
+app.get('/login', login.view)
 app.get('/index', index.view);
 // app.get('/activity', activity.view)
 app.get('/activity', getData.viewActivity)

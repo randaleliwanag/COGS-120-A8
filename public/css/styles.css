@@ -51,7 +51,7 @@
     background: white;
     z-index: 200;
     color: black;
-    padding: 350px 0;
+    padding: 250px 0;
     text-align: center;
 }
 
@@ -65,7 +65,7 @@
     background: white;
     z-index: -10;
     color: black;
-    padding: 350px 0;
+    padding: 250px 0;
     text-align: center;
     transition: all 0.5s;
 }
