@@ -3,6 +3,7 @@ const splash = document.querySelector(".splash");
 document.addEventListener("DOMContentLoaded", (e)=>{
     setTimeout(()=>{
         splash.classList.add("display-none");
+        window.location = "/index";
     }, 3000);
 })
 
