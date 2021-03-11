@@ -1,7 +1,7 @@
 <script>
   window.fbAsyncInit = function() {
     FB.init({
-      appId      : '468572040847415',
+      appId      : '475385096974012',
       cookie     : true,
       xfbml      : true,
       version    : 'v3.2'
@@ -10,7 +10,7 @@
     FB.AppEvents.logPageView();
 
     FB.Event.subscribe('auth.login', function(){
-    window.location = 'https://cogs120--a7.herokuapp.com/index';
+      window.location = '/index';
     });
 
   };
