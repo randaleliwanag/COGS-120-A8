@@ -13,6 +13,7 @@ var index = require('./routes/index');
 // var activity = require('./routes/activity');
 var login = require('./routes/login')
 var signup = require('./routes/signup')
+var splash = require('./routes/splash')
 // var wellness = require('./routes/wellness')
 // var start = require('./routes/start')
 // var end = require('./routes/end')
@@ -43,13 +44,15 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', login.view)
+app.get('/', splash.view)
+app.get('/login', login.view)
 app.get('/index', index.view);
 // app.get('/activity', activity.view)
 app.get('/activity', getData.viewActivity)
 // app.get('/wellness', getData.viewWellness)
 // app.get('/wellness', wellness.view)
 app.get('/signup', signup.view)
+app.get('/splash', splash.view)
 app.get('/start', getData.startDay)
 app.get('/end', getData.endDay)
 app.get('/data/:page', getData.showData)
