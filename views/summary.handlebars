@@ -18,6 +18,11 @@
 </head>
 <body class="summary">
 
+    {{!-- <div class="splash">
+		<img src="/images/Mindful.png" class="fade-in" style="max-width: 70%;">
+        <h1 class="fade-in">Generating Summary and Insights!</h1>
+    </div>--}}
+
     <div class="container">
         <div class="row d-flex justify-content-around my-3">
             <div class="col-3" align = "right">
@@ -40,7 +45,7 @@
                     <li><a class="dropdown-item disabled" href="#">Settings</a></li>
                     <li><a class="dropdown-item disabled" href="#">Help</a></li>
                     <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="/login">Sign Out</a></li>
+                    <li><a class="dropdown-item" id="signOut">Sign Out</a></li>
                 </ul>
             </div>
         </div>
@@ -67,13 +72,15 @@
         </div><br>
 
         <div class = "pull-left mb-4">
-            <button type="button" class="btn btn-primary" onclick="location.href='/end'"><i class="fas fa-arrow-left"></i> Back</button>
+            <button type="button" id="endDayBack" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
         </div>
 
         <div class = "pull-right mb-4">
-            <button type="button" class="btn btn-primary" onclick="location.href='/index'">Done</i></button>
+            <button type="button" id="endDay" class="btn btn-primary" onclick="location.href='/index'">Done</i></button>
         </div>
     </div>
+ 
+<script src="/js/alerts.js"></script> 
 
 </body>
 </html>

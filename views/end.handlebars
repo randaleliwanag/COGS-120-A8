@@ -40,7 +40,7 @@
 				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
 				<li><a class="dropdown-item disabled" href="#">Help</a></li>
 				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" href="/login">Sign Out</a></li>
+				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
 			</ul>
 		</div>
     </div>
@@ -58,14 +58,6 @@
         </div>
     </form><br>
 
-    {{!-- <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each activity}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">{{this}}</button></div>
-        {{/each}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">Add <i class="fas fa-plus"></i></button></div>
-    </div> --}}
-
-
     <div class="row mb-1">
         <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
             <h3>How are you feeling?</h3>
@@ -77,13 +69,6 @@
         <div class="col text-center mb-3"><button type="button" class="btn btn-light mood-btn">{{this}}</button></div>
         {{/each}}
         {{!-- <div class="col text-center mb-3"><button type="button" class="btn btn-light add-mood">Add <i class="fas fa-plus"></i></button></div> --}}
-
-        {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
-        {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-frown fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-meh fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-smile fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-laugh-beam fa-2x"></button></div> --}}
     </div>
 
 
@@ -102,16 +87,17 @@
 
         {{!-- Button should be submit type I think --}}
         <div class = "pull-left">
-                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
+                <button type="button" id="back" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
             </div>
 
         <div class = "pull-right">
                 <button type="button" class="btn btn-primary log-data">Submit</button>
             </div>
     </div>
-
 </div>
 
 <script src="../js/end.js"></script> 
+<script src="/js/alerts.js"></script>
+
 </body>
 </html>
