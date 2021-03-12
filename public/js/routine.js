@@ -14,13 +14,13 @@ function initializePage() {
         $(this).blur()
     });
 
-    $(".mood-btn").click(function() {
-        $(this).toggleClass('mood-pressed')
+    $(".supplement").click(function() {
+        $(this).toggleClass('sup-pressed')
         $(this).blur()
     });
 
-    $(".symptom-btn").click(function() {
-        $(this).toggleClass('symp-pressed')
+    $(".medication").click(function() {
+        $(this).toggleClass('med-pressed')
         $(this).blur()
     })
 
@@ -30,8 +30,8 @@ function initializePage() {
 
 function addUserData() {
     let activities = []
-    let moods = []
-    let symptoms = []
+    let supplements = []
+    let medications = []
     let data = {}
     var todayDate = new Date();
 
@@ -41,21 +41,21 @@ function addUserData() {
             activities.push($(this).html())
         })
 
-        // Get the moods
-        $('.mood-pressed').each(function() {
-            moods.push($(this).html())
+        // Get the supplements
+        $('.sup-pressed').each(function() {
+            supplements.push($(this).html())
         })
 
-        // Get the symptoms
-        $('.symp-pressed').each(function() {
-            symptoms.push($(this).html())
+        // Get the medications
+        $('.med-pressed').each(function() {
+            medications.push($(this).html())
         })
 
         data = {
             date: todayDate.toDateString(),
             activity: activities,
-            mood: moods,
-            symptom: symptoms
+            supplement: supplements,
+            medication: medications
         }
 
         console.log(data)

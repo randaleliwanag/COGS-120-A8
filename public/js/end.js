@@ -9,10 +9,10 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
-	$(".activity-btn").click(function() {
-        $(this).toggleClass('act-pressed')
-        $(this).blur()
-    });
+	// $(".activity-btn").click(function() {
+    //     $(this).toggleClass('act-pressed')
+    //     $(this).blur()
+    // });
 
     $(".mood-btn").click(function() {
         $(this).toggleClass('mood-pressed')
@@ -29,7 +29,7 @@ function initializePage() {
 
 
 function addUserData() {
-    let activities = []
+    // let activities = []
     let moods = []
     let symptoms = []
     let data = {}
@@ -37,9 +37,9 @@ function addUserData() {
 
     $('.log-data').click(function() {
         // Get the activities
-        $('.act-pressed').each(function() {
-            activities.push($(this).html())
-        })
+        // $('.act-pressed').each(function() {
+        //     activities.push($(this).html())
+        // })
 
         // Get the moods
         $('.mood-pressed').each(function() {
@@ -53,7 +53,7 @@ function addUserData() {
 
         data = {
             date: todayDate.toDateString(),
-            activity: activities,
+            // activity: activities,
             mood: moods,
             symptom: symptoms
         }
@@ -61,6 +61,6 @@ function addUserData() {
         console.log(data)
         // Now I gotta figure out what to do with this data...
 
-        window.location.href="/index"
+        window.location.href="/summary"
     })
 }

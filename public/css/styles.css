@@ -30,15 +30,15 @@
     color: white;
 }
 
-.act-pressed, .mood-pressed, .symp-pressed {
+.act-pressed, .mood-pressed, .symp-pressed, .sup-pressed, .med-pressed {
     background-color: #80dfff;
 }
 
-.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover {
+.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover, .supplement:hover, .medication:hover {
     background-color: #e6e6e6;
 }
 
-#add-activity:hover, #add-mood:hover, #add-symptom:hover {
+.add-activity:hover, .add-mood:hover, .add-symptom:hover, .add-sup:hover, .add-med:hover {
     background-color: #e6e6e6;
 }
 
