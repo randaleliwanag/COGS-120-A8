@@ -52,7 +52,7 @@
 				<li><a class="dropdown-item" href="#">Settings</a></li>
 				<li><a class="dropdown-item" href="#">Help</a></li>
 				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" href="/login">Sign Out</a></li>
+				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
 			</ul>
 		</div>
 	</div>	
@@ -74,31 +74,6 @@
 	</div>
 
 	<hr class="mb-4">
-
-	{{!-- This is the old title header --}}
-	{{!-- <div class="title-header">
-		<div class="row">
-			<div class="col-6 offset-3 jumbotron">
-				<h1 class="display-4">Hello, User!</h1>
-			</div>
-
-			<div class="col-1 offset-2 align-self-center dropdown">
-				<button type="button" class="btn btn-light fas fa-bars fa-2x" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="#">Profile</a>
-					<a class="dropdown-item" href="#">Help</a>
-    				<a class="dropdown-item" href="#">Settings</a>
-					<div class="dropdown-divider"></div>
-    				<a class="dropdown-item" href="/login">Sign Out</a>
-  				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<p class="lead" style="font-size: 36px;" id="currentDate">Monday, February 22nd</p>
-		</div>
-  		<hr class="my-4">
-	</div> --}}
 
 <div class="buttons">
 	<div class="row d-flex justify-content-center">
@@ -137,6 +112,7 @@
 </div>
 
 <script src="/js/index.js"></script> 
+<script src="/js/alerts.js"></script> 
 <script src="/js/insert-nav.js"></script> 
 </body>
 </html>

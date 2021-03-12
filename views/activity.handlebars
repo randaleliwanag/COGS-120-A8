@@ -85,13 +85,6 @@
         <div class="col text-center mb-3"><button type="button" class="btn btn-light mood-btn">{{this}}</button></div>
         {{/each}}
         <div class="col text-center mb-3"><button type="button" class="btn btn-light" id="add-mood">Add <i class="fas fa-plus"></i></button></div>
-
-        {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
-        {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-frown fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-meh fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-smile fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-laugh-beam fa-2x"></button></div> --}}
     </div>
 
 
@@ -109,34 +102,15 @@
     </div>
 
         <div class = "pull-left mb-4">
-                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
+                <button type="button" id="back" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
             </div>
         <div class = "pull-right mb-4">
-                <button type="button" class="btn btn-primary log-data" onclick="location.href='/index'">Save</button>
+                <button type="button" id="save" class="btn btn-primary log-data" onclick="location.href='/index'">Save</button>
             </div>
-
-
-        {{!-- <div class="row justify-content-around">
-            <div class="col-4 text-center my-3">
-                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
-            </div>
-
-            <div class="col-4 text-center my-3">
-                <button type="button" class="btn btn-primary">Next <i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div> --}}
-    </div>
-
-    {{!-- <div class="row justify-content-center my-5">
-        <div class="col-5 text-center">
-            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
-        </div>
-    </div> --}}
-
-    
-
+    </div>  
 </div>
 
-<script src="../js/activity.js"></script> 
+<script src="/js/alerts.js"></script> 
+
 </body>
 </html>

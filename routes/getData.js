@@ -16,6 +16,11 @@ exports.viewWellness = function(request, response){
 	response.render('routine', data['wellness-routine']);
 };
 
+// Edit routine
+exports.vieweditRoutine = function(request, response){
+	response.render('editRoutine', data['wellness-routine']);
+};
+
 // Start day
 exports.startDay = function(request, response){
 	response.render('start', data['log-activity']);
@@ -25,7 +30,6 @@ exports.startDay = function(request, response){
 exports.endDay = function(request, response){
 	response.render('end', data['log-activity']);
 };
-
 
 exports.showData = function(request, response) {
     var show = request.params.page
