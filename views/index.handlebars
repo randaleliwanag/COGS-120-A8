@@ -17,7 +17,7 @@
 
 	{{> facebook}}
 	<script src="/js/facebook.js"></script>
-	
+
 </head>
 
 <body class="fade-in">
@@ -28,8 +28,8 @@
 </div> --}}
 
 <div class="container">
-    <div class="row align-items-center" style="margin: 15px;">
-        <div class="col"></div>
+  <div class="row align-items-center">
+    <div class="col"></div>
 
 		<div class="col"></div>
 
@@ -55,59 +55,52 @@
 				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
 			</ul>
 		</div>
-	</div>	
-
-	<div class="row align-items-center">
-		<div class="col"></div>
-
-		<div class="col" align="center">
-        	<div class="jumbotron">
-            	<h1 id="name">Hello, User!</h1>
-        	</div>
-    	</div>
-
-		<div class="col"></div>
-	</div>
-	
-	<div class="col"></div>
-		<p class="lead col text-center my-2" id="currentDate"></p>
 	</div>
 
-	<hr class="mb-4">
-
-<div class="buttons">
-	<div class="row d-flex justify-content-center">
-		<div class="col" id="start-day">
-			<button type="button" class="btn btn-lg btn-primary" onclick="location.href='/start'" style="width: 200px;">
-				Start Day
-			</button>
-		</div>
+	<div class="row align-items-center text-center">
+  	<div class="jumbotron">
+      	<h1 id="name">Hello, User!</h1>
+  	</div>
 	</div>
 
-	<div class="row d-flex justify-content-center">
-		<div class="col" id="wellness">
-			<button type="button" class="btn btn-lg btn-primary" onclick="location.href='/activity'" style="width: 200px;">
-				Log Activity
-			</button>
-		</div>
-	</div>
-
-	<div class="row d-flex justify-content-center">
-		<div class="col" id="activity">
-			<button type="button" class="btn btn-lg btn-primary" onclick="location.href='/routine'" style="width: 200px;">
-				Wellness Routine
-			</button>
-		</div>
-	</div>
-
-	<div class="row d-flex justify-content-center">
-		<div class="col" id="end-day">
-			<button type="button" class="btn btn-lg btn-primary" onclick="location.href='/end'" style="width: 200px;">
-				End Day
-			</button>
-		</div>
-	</div>
+<div class="row">
+	<p class="lead text-center" id="currentDate"></p>
 </div>
+	<hr>
+
+	<div class="buttons">
+		<div class="row d-flex justify-content-center">
+			<div class="col" id="start-day">
+				<button type="button" class="btn btn-lg btn-primary" id="start-btn" onclick="location.href='/start'" style="width: 200px;">
+					Start Day
+				</button>
+			</div>
+		</div>
+
+		<div class="row d-flex justify-content-center">
+			<div class="col" id="activity">
+				<button type="button" class="btn btn-lg btn-primary" id="log-btn" onclick="location.href='/activity'" style="width: 200px;">
+					Log Activity
+				</button>
+			</div>
+		</div>
+
+		<div class="row d-flex justify-content-center">
+			<div class="col" id="wellness">
+				<button type="button" class="btn btn-lg btn-primary" id="wellness-btn" onclick="location.href='/routine'" style="width: 200px;">
+					Wellness Routine
+				</button>
+			</div>
+		</div>
+
+		<div class="row d-flex justify-content-center">
+			<div class="col" id="end-day">
+				<button type="button" class="btn btn-lg btn-primary" id="end-btn" onclick="location.href='/end'" style="width: 200px;">
+					End Day
+				</button>
+			</div>
+		</div>
+	</div>
 
 </div>
 
@@ -116,5 +109,3 @@
 <script src="/js/insert-nav.js"></script> 
 </body>
 </html>
-
-

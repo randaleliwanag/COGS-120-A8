@@ -19,92 +19,109 @@
 <body class="wellness-routine">
 
 <div class="container">
-    <div class="row align-items-center" style="margin: 15px;">
+    <div class="row align-items-center">
         <div class="col" align="center">
+            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
+        </div>
+        <div class="col"></div>
+
+        <div class="col" align="center">
+    			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    				<i class="fas fa-bars"> </i>
+    			</button>
+    			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Help</a></li>
+    				<div class="dropdown-divider"></div>
+    				<li><a class="dropdown-item" href="/">Sign Out</a></li>
+    			</ul>
+    		</div>
+    </div>
+
+    <div class="row align-items-center text-center">
+        <div class="jumbotron">
+            <h1>Edit Routine</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>Add a daily wellness activity:</h3>
+    </div>
+
+
+    <div class="col text-center" id="routine-options">
+        {{#each wellness}}
+        <button type="button" class="btn btn-light routine-btn">{{this}}</button>
+        {{/each}}
+        <button type="button" class="btn btn-light add-routine" id="add-routine">Add <i class="fas fa-plus"></i></button>
+    </div>
+
+
+    <div class="row">
+        <h3>Add daily supplements:</h3>
+    </div>
+
+    <div class="col text-center" id="supplement-options">
+        {{#each supplements}}
+        <button type="button" class="btn btn-light supplement-btn">{{this}}</button>
+        {{/each}}
+        <button type="button" class="btn btn-light add-supplement" id="add-supplement">Add <i class="fas fa-plus"></i></button>
+
+        {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
+        {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
+        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-frown fa-2x"></button></div>
+        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-meh fa-2x"></button></div>
+        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-smile fa-2x"></button></div>
+        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-laugh-beam fa-2x"></button></div> --}}
+    </div>
+
+
+    <div class="row">
+        <h3>Add daily medications:</h3>
+    </div>
+
+    <div class="col text-center" id="med-options">
+        {{#each medication}}
+        <button type="button" class="btn btn-light med-btn">{{this}}</button>
+        {{/each}}
+        <button type="button" class="btn btn-light" id="add-med">Add <i class="fas fa-plus"></i></button>
+    </div>
+
+    <div class = "row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+      </div>
+
+      <div class="col"></div>
+
+      <div class="col text-center">
+        <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Save</button>
+      </div>
+    </div>
+
+        {{!-- <div class="row justify-content-around">
+            <div class="col-4 text-center my-3">
+                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
+            </div>
+
+            <div class="col-4 text-center my-3">
+                <button type="button" class="btn btn-primary">Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div> --}}
+
+
+    {{!-- <div class="row justify-content-center my-5">
+        <div class="col-5 text-center">
             <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
         </div>
-
-		<div class="col"></div>
-
-		<div class="col" align="center">
-			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				<i class="fas fa-bars"> </i>
-			</button>
-			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
-                <li><a class="dropdown-item disabled" href="#">Log History</a></li>
-				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
-				<li><a class="dropdown-item disabled" href="#">Help</a></li>
-				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
-			</ul>
-		</div>
-    </div>
-
-    <div class="row align-items-center">
-		<div class="col"></div>
-
-		<div class="col" align="center">
-        	<div class="jumbotron">
-            	<h1 id="name">Wellness Routine</h1>
-        	</div>
-    	</div>
-
-		<div class="col"></div>
-	</div>
+    </div> --}}
 
 
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>Wellness Activities:</h3>
-        </div>
-    </div>
 
-
-    <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each wellness}}
-        <div class="col text-center mb-3"><input type="checkbox">  {{this}}</div>
-        {{/each}}
-    </div>
-
-
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>Daily Supplements:</h3>
-        </div>
-    </div>
-
-    <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each supplements}}
-        <div class="col text-center mb-3"><input type="checkbox">  {{this}}</div>
-        {{/each}}
-    </div>
-
-
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>Daily Medications:</h3>
-        </div>
-    </div>
-
-    <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each medication}}
-        <div class="col text-center mb-3"><input type="checkbox">  {{this}}</div>
-        {{/each}}
-    </div>
-
-        <div class = "pull-left mb-4">
-            <button type="button" id="back" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
-        </div>
-
-        <div class = "pull-right mb-4">
-            <button type="button" class="btn btn-primary" onclick="location.href='/editRoutine'">Edit</button>
-          </div>
-    </div>
 </div>
-
-<script src="../js/routine.js"></script> 
+<script src="../js/activity.js"></script>
 <script src="/js/alerts.js"></script>
-
 </body>
 </html>
