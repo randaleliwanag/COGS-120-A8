@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (e)=>{
     }, 2500);
 })
 
-$("#back").click(function() {
+$(".back").click(function() {
     var yes = confirm("Are you sure? Any unsaved data will be lost.");
     
     if (yes) {

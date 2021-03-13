@@ -9,17 +9,17 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
-	$(".activity-btn").click(function() {
-        $(this).toggleClass('act-pressed')
+	$(".routine-btn").click(function() {
+        $(this).toggleClass('routine-pressed')
         $(this).blur()
     });
 
-    $(".supplement").click(function() {
+    $(".supplement-btn").click(function() {
         $(this).toggleClass('sup-pressed')
         $(this).blur()
     });
 
-    $(".medication").click(function() {
+    $(".med-btn").click(function() {
         $(this).toggleClass('med-pressed')
         $(this).blur()
     })

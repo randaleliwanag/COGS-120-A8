@@ -9,11 +9,6 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
-	// $(".activity-btn").click(function() {
-    //     $(this).toggleClass('act-pressed')
-    //     $(this).blur()
-    // });
-
     $(".mood-btn").click(function() {
         $(this).toggleClass('mood-pressed')
         $(this).blur()
@@ -29,18 +24,12 @@ function initializePage() {
 
 
 function addUserData() {
-    // let activities = []
     let moods = []
     let symptoms = []
     let data = {}
     var todayDate = new Date();
 
     $('.log-data').click(function() {
-        // Get the activities
-        // $('.act-pressed').each(function() {
-        //     activities.push($(this).html())
-        // })
-
         // Get the moods
         $('.mood-pressed').each(function() {
             moods.push($(this).html())
@@ -59,7 +48,6 @@ function addUserData() {
         }
 
         console.log(data)
-        // Now I gotta figure out what to do with this data...
 
         window.location.href="/summary"
     })

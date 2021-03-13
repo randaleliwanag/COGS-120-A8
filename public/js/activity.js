@@ -23,21 +23,6 @@ function initializePage() {
         $(this).toggleClass('symp-pressed')
         $(this).blur()
     })
-
-		$(".med-btn").click(function() {
-				$(this).toggleClass('med-pressed')
-				$(this).blur()
-		})
-
-		$(".supplement-btn").click(function() {
-				$(this).toggleClass('supplement-pressed')
-				$(this).blur()
-		})
-
-		$(".routine-btn").click(function() {
-				$(this).toggleClass('routine-pressed')
-				$(this).blur()
-		})
 }
 
 

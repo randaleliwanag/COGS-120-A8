@@ -19,37 +19,33 @@
 <body class="end-day">
 
 <div class="container">
-    <div class="row align-items-center">
-        <div class="col" align="center">
-            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
-        </div>
+  <div class="row align-items-center">
+    <div class="col" align="center">
+        <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
+    </div>
 
-        <div class="col-4 title-header">
-            <div class="jumbotron">
-                <h1 class="display-4">End Day</h1>
-            </div>
-        </div>
+		<div class="col"></div>
 
-        <div class="col-3 dropdown">
+		<div class="col" align="center">
 			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				<i class="fas fa-bars"> </i>
 			</button>
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
-                <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+				<li><a class="dropdown-item disabled" href="#">Log History</a></li>
 				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
 				<li><a class="dropdown-item disabled" href="#">Help</a></li>
 				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
+				<li><a class="dropdown-item" href="/login">Sign Out</a></li>
 			</ul>
 		</div>
-    </div>
+  </div>
 
-    <div class="row align-items-center text-center">
-        <div class="jumbotron">
-            <h1>End Day</h1>
-        </div>
+  <div class="row align-items-center text-center">
+    <div class="jumbotron">
+        <h1>End Day</h1>
     </div>
+  </div>
 
     <div class="row">
         <h3>What time are you sleeping?</h3>
@@ -69,7 +65,7 @@
           {{#each mood}}
           <button type="button" class="btn btn-light mood-btn">{{this}}</button>
           {{/each}}
-          <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button>
+          {{!-- <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button> --}}
 
     </div>
 
@@ -81,13 +77,13 @@
         {{#each symptom}}
         <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button>
+        {{!-- <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
         {{!-- Button should be submit type I think --}}
     <div class="row">
       <div class="col text-center">
-          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn-primary back" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
       </div>
 
       <div class="col"></div>
