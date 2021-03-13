@@ -42,12 +42,12 @@
 
     <div class="row align-items-center text-center">
         <div class="jumbotron">
-            <h1>Edit Routine</h1>
+            <h1>Wellness Routine</h1>
         </div>
     </div>
 
     <div class="row">
-        <h3>Add a daily wellness activity:</h3>
+        <h3>Daily wellness activity:</h3>
     </div>
 
 
@@ -55,19 +55,19 @@
         {{#each wellness}}
         <button type="button" class="btn btn-light routine-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light add-routine" id="add-routine">Add <i class="fas fa-plus"></i></button>
+        {{!-- <button type="button" class="btn btn-light add-routine" id="add-routine">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
 
     <div class="row">
-        <h3>Add daily supplements:</h3>
+        <h3>Daily supplements:</h3>
     </div>
 
     <div class="col text-center" id="supplement-options">
         {{#each supplements}}
         <button type="button" class="btn btn-light supplement-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light add-supplement" id="add-supplement">Add <i class="fas fa-plus"></i></button>
+        {{!-- <button type="button" class="btn btn-light add-supplement" id="add-supplement">Add <i class="fas fa-plus"></i></button> --}}
 
         {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
         {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
@@ -79,25 +79,25 @@
 
 
     <div class="row">
-        <h3>Add daily medications:</h3>
+        <h3>Daily medications:</h3>
     </div>
 
     <div class="col text-center" id="med-options">
         {{#each medication}}
         <button type="button" class="btn btn-light med-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light" id="add-med">Add <i class="fas fa-plus"></i></button>
+        {{!-- <button type="button" class="btn btn-light" id="add-med">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
     <div class = "row">
       <div class="col text-center">
-        <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+        <button type="button" class="btn btn-primary back" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
       </div>
 
       <div class="col"></div>
 
       <div class="col text-center">
-        <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Save</button>
+        <button type="button" class="btn btn-primary log-data" id="save-btn">Save</button>
       </div>
     </div>
 
@@ -121,7 +121,7 @@
 
 
 </div>
-<script src="../js/activity.js"></script>
-<script src="/js/alerts.js"></script>
+<script src="../js/routine.js"></script>
+<script src="../js/alerts.js"></script>
 </body>
 </html>

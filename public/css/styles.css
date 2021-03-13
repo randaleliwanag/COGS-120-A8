@@ -55,7 +55,7 @@
 
 .activity-btn:hover, .mood-btn:hover, .symptom-btn:hover, .add-activity:hover,
 .add-mood:hover, .add-symptom:hover, .add-routine:hover, .add-sup:hover, .add-med:hover,
-.routine-btn:hover, .supplement:hover, .med:hover {
+.routine-btn:hover, .supplement-btn:hover, .med-btn:hover {
     background-color: #CCF5ED;
     color: #6E7687;
     box-shadow: none;

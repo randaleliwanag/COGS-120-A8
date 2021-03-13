@@ -64,7 +64,7 @@
       {{#each activity}}
       <button type="button" class="btn btn-light activity-btn">{{this}}</button>
       {{/each}}
-      <button type="button" class="btn btn-light" id="add-activity">Add <i class="fas fa-plus"></i></button>
+      {{!-- <button type="button" class="btn btn-light" id="add-activity">Add <i class="fas fa-plus"></i></button> --}}
   </div>
 
 
@@ -76,7 +76,7 @@
     {{#each mood}}
     <button type="button" class="btn btn-light mood-btn">{{this}}</button>
     {{/each}}
-    <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button>
+    {{!-- <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button> --}}
 
       {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
       {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
@@ -95,12 +95,12 @@
       {{#each symptom}}
       <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
       {{/each}}
-      <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button>
+      {{!-- <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button> --}}
   </div>
 
   <div class="row">
     <div class="col text-center">
-      <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+      <button type="button" class="btn btn-primary back" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
     </div>
 
     <div class="col"></div>

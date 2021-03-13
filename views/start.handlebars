@@ -67,7 +67,7 @@
           {{#each mood}}
           <button type="button" class="btn btn-light mood-btn">{{this}}</button>
           {{/each}}
-          <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button>
+          {{!-- <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button> --}}
 
     </div>
 
@@ -80,24 +80,23 @@
         {{#each symptom}}
         <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light add-symptom" id="add-symptom">Add <i class="fas fa-plus"></i></button>
+        {{!-- <button type="button" class="btn btn-light add-symptom" id="add-symptom">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
         {{!-- Button should be submit type I think --}}
     <div class="row">
       <div class="col text-center">
-          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+          <button type="button" class="btn btn-primary back" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
       </div>
 
       <div class="col"></div>
 
       <div class="col text-center">
-          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Save</button>
+          <button type="button" class="btn btn-primary log-data" id="save-btn">Save</button>
       </div>
     </div>
 </div>
-<script src="../js/activity.js"></script>
 <script src="../js/start.js"></script> 
-<script src="/js/alerts.js"></script> 
+<script src="../js/alerts.js"></script> 
 </body>
 </html>

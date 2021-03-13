@@ -24,33 +24,33 @@
 </div>
 
 <div class="container">
-    <div class="row d-flex justify-content-around my-3">
-        <div class="col-3" align = "right">
-            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
-        </div>
-
-        <div class="col-4 title-header">
-            <div class="jumbotron">
-                <h1 class="display-4">Summary & Insights</h1>
-            </div>
-        </div>
-
-        <div class="col-3 dropdown">
-            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-bars"> </i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item disabled" href="#">Profile</a></li>
-                <li><a class="dropdown-item disabled" href="#">Log History</a></li>
-                <li><a class="dropdown-item disabled" href="#">Settings</a></li>
-                <li><a class="dropdown-item disabled" href="#">Help</a></li>
-                <div class="dropdown-divider"></div>
-                <li><a class="dropdown-item" id="signOut">Sign Out</a></li>
-            </ul>
-        </div>
+  <div class="row align-items-center">
+    <div class="col" align="center">
+        <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
     </div>
 
+		<div class="col"></div>
 
+		<div class="col" align="center">
+			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="fas fa-bars"> </i>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+				<li><a class="dropdown-item disabled" href="#">Log History</a></li>
+				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+				<li><a class="dropdown-item disabled" href="#">Help</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a class="dropdown-item" href="/login">Sign Out</a></li>
+			</ul>
+		</div>
+  </div>
+
+  <div class="row align-items-center text-center">
+    <div class="jumbotron">
+        <h1>Summary and Insights</h1>
+    </div>
+  </div>
     <div class="row mb-1">
         <div align = "center">
             <h3>Summary:</h3>
@@ -76,7 +76,7 @@
     </div>
 
     <div class = "pull-right mb-4">
-        <button type="button" id="endDay" class="btn btn-primary" onclick="location.href='/index'">Log Day</i></button>
+        <button type="button" id="endDay" class="btn btn-primary">Log Day</i></button>
     </div>
 </div>
  
