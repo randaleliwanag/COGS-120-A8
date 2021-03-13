@@ -19,60 +19,61 @@
 <body class="summary">
 
     <div class="container">
-        <div class="row d-flex justify-content-around my-3">
-            <div class="col-3" align = "right">
-                <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
-            </div>
+      <div class="row align-items-center">
+          <div class="col" align="center">
+              <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
+          </div>
 
-            <div class="col-4 title-header">
-                <div class="jumbotron">
-                    <h1 class="display-4">Summary & Insights</h1>
-                </div>
-            </div>
+          <div class="col"></div>
 
-            <div class="col-3 dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bars"> </i>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Log History</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Help</a></li>
-                    <div class="dropdown-divider"></div>
-                    <li><a class="dropdown-item" href="/">Sign Out</a></li>
-                </ul>
-            </div>
+          <div class="col" align="center">
+      			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      				<i class="fas fa-bars"> </i>
+      			</button>
+      			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      				<li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Log History</a></li>
+      				<li><a class="dropdown-item" href="#">Settings</a></li>
+      				<li><a class="dropdown-item" href="#">Help</a></li>
+      				<div class="dropdown-divider"></div>
+      				<li><a class="dropdown-item" href="/">Sign Out</a></li>
+      			</ul>
+  		   </div>
+      </div>
+
+      <div class="row align-items-center text-center">
+          <div class="jumbotron">
+              <h1>Today's Overview</h1>
+          </div>
+      </div>
+
+
+        <div class="row text-center">
+          <h3>Summary:</h3>
         </div>
 
-
-        <div class="row mb-1">
-            <div align = "center">
-                <h3>Summary:</h3>
-            </div>
-        </div>
-
-        <div align = "center">
+        <div class="row text-center">
             <textarea cols="45" rows="5">Today you...</textarea>
         </div><br>
 
-        <div class="row mb-1">
-            <div align = "center">
-                <h3>Insights:</h3>
-            </div>
+        <div class="row text-center">
+              <h3>Insights:</h3>
         </div>
 
-        <div align = "center">
+        <div class="row text-center">
             <textarea cols="45" rows="5">In order to...</textarea>
         </div><br>
 
-        <div class = "pull-left mb-4">
-            <button type="button" class="btn btn-primary" onclick="location.href='/end'"><i class="fas fa-arrow-left"></i> Back</button>
-        </div>
+    <div class="row">
+      <div class="col text-center">
+          <button type="button" class="btn btn-primary" onclick="location.href='/end'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+      </div>
 
-        <div class = "pull-right mb-4">
-            <button type="button" class="btn btn-primary" onclick="location.href='/index'">Exit</i></button>
-        </div>
+      <div class="col"></div>
+
+      <div class="col text-center">
+          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Exit</button>
+      </div>
     </div>
 
 </body>
