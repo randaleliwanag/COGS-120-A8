@@ -1,5 +1,4 @@
 .buttons .row {
-    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -22,7 +21,20 @@
 }
 
 .btn-primary {
-    background-color: DodgerBlue;
+    background-color: #E1F1F4;
+    color: #6E7687;
+    border: none;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #6E7687
+    border: none;
+}
+
+.btn-primary:active {
+    background-color: #A6D5DD;
+    border: none;
 }
 
 .btn-fb {
@@ -30,14 +42,147 @@
     color: white;
 }
 
-.act-pressed, .mood-pressed, .symp-pressed {
-    background-color: #80dfff;
+.act-pressed, .mood-pressed, .symp-pressed, .med-pressed, .supplement-pressed, .routine-pressed {
+    background-color: #DDF8F3;
+    box-shadow: none;
 }
 
-.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover {
-    background-color: #e6e6e6;
+.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover, #add-activity:hover,
+#add-mood:hover, #add-symptom:hover, #add-routine:hover, #add-supplement:hover, #add-med:hover,
+.routine-btn:hover, .supplement-btn:hover, .med-btn:hover {
+    background-color: #CCF5ED;
+    color: #6E7687;
+    box-shadow: none;
+}
+
+.activity-btn:active, .mood-btn:active, .symptom-btn:active, #add-activity:active,
+#add-mood:active, #add-symptom:active, #add-routine:active, #add-supplement:active, #add-med:active,
+.routine-btn:active, .supplement-btn:active, .med-btn:active {
+    background-color: #BAF2E7;
+    color: #6E7687;
+    box-shadow: none;
+}
+
+.activity-btn, .mood-btn, .symptom-btn, .routine-btn, .supplement-btn, .med-btn,
+#add-activity, #add-mood, #add-symptom, #add-routine, #add-supplement, #add-med {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  color: #6E7687;
+  font-weight: 500;
+  box-shadow: none;
 }
 
 #add-activity:hover, #add-mood:hover, #add-symptom:hover {
-    background-color: #e6e6e6;
+    background-color: #C4E3E9;
+    color: #6E7687;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/fonts/Quicksand-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("/fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Quicksand';
+  font-weight: 500;
+}
+
+hr {
+  border: 1px solid #6E7687;
+  max-width: 90%;
+  margin: 30px;
+}
+
+#dropdownMenuButton1, #home-btn {
+  background-color: #E1F1F4;
+  color: #6E7687;
+  border: none;
+}
+
+#start-btn, #log-btn, #end-btn, #wellness-btn, .save, .back {
+  background-color: #E1F1F4;
+  color: #6E7687;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+#start-btn:hover, #log-btn:hover, #end-btn:hover, #wellness-btn:hover, #save-btn:hover, #back-btn:hover {
+  background-color: #C4E3E9;
+  color: #6E7687;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+#start-btn:active, #log-btn:active, #end-btn:active, #wellness-btn:active, #save-btn:active, #back-btn:active {
+  background-color: #A6D5DD;
+  color: #6E7687;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+#start-btn:focus, #log-btn:focus, #end-btn:focus, #wellness-btn:focus, #save-btn:focus, #back-btn:focus {
+  box-shadow: none;
+}
+
+.row {
+  margin: 15px;
+}
+
+.col {
+  padding: 5px;
+}
+
+#activity-options, #mood-options, #symptom-options, #routine-options, #supplement-options, #med-options {
+  margin: 15px;
+  column-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px;
+
+}
+
+h3 {
+  font-weight: 400;
+}
+
+body {
+  /*background: rgb(235,245,247);
+  background: linear-gradient(180deg, rgba(235,245,247,1) 0%, rgba(243,249,250,1) 10%, rgba(255,255,255,1) 100%);*/
+
+  background: rgb(243,249,250);
+  background: linear-gradient(180deg, rgba(243,249,250,1) 0%, rgba(249,252,252,1) 10%, rgba(255,255,255,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #494F5A;
+}
+
+#wake {
+  max-width: 40%;
+  margin: auto;
 }

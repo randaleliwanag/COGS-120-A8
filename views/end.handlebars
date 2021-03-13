@@ -19,98 +19,79 @@
 <body class="end-day">
 
 <div class="container">
-    <div class="row d-flex justify-content-around my-3">
-        <div class="col-3" align = "right">
-            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
+    <div class="row align-items-center">
+        <div class="col" align="center">
+            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
         </div>
 
-        <div class="col-4 title-header">
-            <div class="jumbotron">
-                <h1 class="display-4">End Day</h1>
-            </div>
-        </div>
+        <div class="col"></div>
 
-        <div class="col-3 dropdown">
-			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-				<i class="fas fa-bars"> </i>
-			</button>
-			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-				<li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Log History</a></li>
-				<li><a class="dropdown-item" href="#">Settings</a></li>
-				<li><a class="dropdown-item" href="#">Help</a></li>
-				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" href="/">Sign Out</a></li>
-			</ul>
-		</div>
-
+        <div class="col" align="center">
+    			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    				<i class="fas fa-bars"> </i>
+    			</button>
+    			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    				<li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Log History</a></li>
+    				<li><a class="dropdown-item" href="#">Settings</a></li>
+    				<li><a class="dropdown-item" href="#">Help</a></li>
+    				<div class="dropdown-divider"></div>
+    				<li><a class="dropdown-item" href="/">Sign Out</a></li>
+    			</ul>
+		   </div>
     </div>
 
-
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>What time are you sleeping?</h3>
+    <div class="row align-items-center text-center">
+        <div class="jumbotron">
+            <h1>End Day</h1>
         </div>
     </div>
 
-    <form>
-        <div class = "row form-group col-sm-8 col-md-6 col-lg-4 col-8 mt-3 mx-auto">
-            <input type="time" class = "text-center" id="sleep" name="sleep">
-        </div>
-    </form><br>
-
-    {{!-- <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each activity}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">{{this}}</button></div>
-        {{/each}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">Add <i class="fas fa-plus"></i></button></div>
-    </div> --}}
-
-
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>How are you feeling?</h3>
-        </div>
+    <div class="row">
+        <h3>What time are you sleeping?</h3>
     </div>
 
-    <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
-        {{#each mood}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">{{this}}</button></div>
-        {{/each}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">Add <i class="fas fa-plus"></i></button></div>
-
-        {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
-        {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-frown fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-meh fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-smile fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-laugh-beam fa-2x"></button></div> --}}
+    <div class="row text-center">
+      <form>
+          <input type="time" class = "text-center" id="sleep" name="sleep">
+      </form>
     </div>
 
-
-    <div class="row mb-1">
-        <div class="col-sm-9 offset-sm-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-11 offset-1">
-            <h3>Any physical symptoms?</h3>
-        </div>
+    <div class="row">
+        <h3>How are you feeling?</h3>
     </div>
 
-    <div class="row gx-0 row-cols-3 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 mb-3">
+    <div class="col text-center" id="mood-options">
+          {{#each mood}}
+          <button type="button" class="btn btn-light mood-btn">{{this}}</button>
+          {{/each}}
+          <button type="button" class="btn btn-light" id="add-mood">Add <i class="fas fa-plus"></i></button>
+
+    </div>
+
+    <div class="row">
+        <h3>Any physical symptoms?</h3>
+    </div>
+
+    <div class="col text-center" id="symptom-options">
         {{#each symptom}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">{{this}}</button></div>
+        <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
         {{/each}}
-        <div class="col text-center mb-3"><button type="button" class="btn btn-light">Add <i class="fas fa-plus"></i></button></div>
+        <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button>
     </div>
 
         {{!-- Button should be submit type I think --}}
-        <div class = "pull-left">
-                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
-            </div>
+    <div class="row">
+      <div class="col text-center">
+          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+      </div>
 
-        <div class = "pull-right">
-                <button type="button" class="btn btn-primary" onclick="location.href='/summary'">Submit</button>
-            </div>
+      <div class="col"></div>
+
+      <div class="col text-center">
+          <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Save</button>
+      </div>
     </div>
-
 </div>
 
 </body>
