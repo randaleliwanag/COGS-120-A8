@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body class="fade-in">
 	<div class="container">
 		<div class="title-header">
 			<div class="row">
@@ -42,7 +42,7 @@
 
 				{{!-- This should be type="submit"; I set it to type="button" to use 'onclick' --}}
 				<div class="text-center mt-3">
-					<button type="button" class="btn btn-primary btn-lg" onclick="location.href='/index'">Login</button>
+					<button type="button" class="btn btn-primary btn-lg" onclick="check(this.form)">Login</button>
 				</div>
 
 				<div class="form-group text-center mt-5">
@@ -56,8 +56,9 @@
 				</div>
 			</form>
 		</div>
-
-
 	</div>
+
+	<script src="../js/login.js"></script>
+
 </body>
 </html>

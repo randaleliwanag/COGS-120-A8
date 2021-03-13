@@ -24,21 +24,25 @@
             <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
         </div>
 
-        <div class="col"></div>
+        <div class="col-4 title-header">
+            <div class="jumbotron">
+                <h1 class="display-4">End Day</h1>
+            </div>
+        </div>
 
-        <div class="col" align="center">
-    			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    				<i class="fas fa-bars"> </i>
-    			</button>
-    			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    				<li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Log History</a></li>
-    				<li><a class="dropdown-item" href="#">Settings</a></li>
-    				<li><a class="dropdown-item" href="#">Help</a></li>
-    				<div class="dropdown-divider"></div>
-    				<li><a class="dropdown-item" href="/">Sign Out</a></li>
-    			</ul>
-		   </div>
+        <div class="col-3 dropdown">
+			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+				<i class="fas fa-bars"> </i>
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+                <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+				<li><a class="dropdown-item disabled" href="#">Help</a></li>
+				<div class="dropdown-divider"></div>
+				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
+			</ul>
+		</div>
     </div>
 
     <div class="row align-items-center text-center">
@@ -65,7 +69,7 @@
           {{#each mood}}
           <button type="button" class="btn btn-light mood-btn">{{this}}</button>
           {{/each}}
-          <button type="button" class="btn btn-light" id="add-mood">Add <i class="fas fa-plus"></i></button>
+          <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button>
 
     </div>
 
@@ -89,10 +93,14 @@
       <div class="col"></div>
 
       <div class="col text-center">
-          <button type="button" class="btn btn-primary" onclick="location.href='/summary'" id="save-btn">Save</button>
+          {{!-- removed the onclick --}}
+          <button type="button" class="btn btn-primary log-data" id="save-btn">Save</button>
       </div>
     </div>
 </div>
+
+<script src="../js/end.js"></script> 
+<script src="/js/alerts.js"></script>
 
 </body>
 </html>

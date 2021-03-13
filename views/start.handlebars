@@ -27,15 +27,15 @@
         <div class="col"></div>
 
 
-        <div class="col" align="center">
+        <div class="col dropdown" align="center">
     			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     				<i class="fas fa-bars"> </i>
     			</button>
     			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    				<li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Log History</a></li>
-    				<li><a class="dropdown-item" href="#">Settings</a></li>
-    				<li><a class="dropdown-item" href="#">Help</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Help</a></li>
     				<div class="dropdown-divider"></div>
     				<li><a class="dropdown-item" href="/">Sign Out</a></li>
     			</ul>
@@ -67,7 +67,7 @@
           {{#each mood}}
           <button type="button" class="btn btn-light mood-btn">{{this}}</button>
           {{/each}}
-          <button type="button" class="btn btn-light" id="add-mood">Add <i class="fas fa-plus"></i></button>
+          <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button>
 
     </div>
 
@@ -80,7 +80,7 @@
         {{#each symptom}}
         <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
         {{/each}}
-        <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button>
+        <button type="button" class="btn btn-light add-symptom" id="add-symptom">Add <i class="fas fa-plus"></i></button>
     </div>
 
         {{!-- Button should be submit type I think --}}
@@ -97,5 +97,7 @@
     </div>
 </div>
 <script src="../js/activity.js"></script>
+<script src="../js/start.js"></script> 
+<script src="/js/alerts.js"></script> 
 </body>
 </html>

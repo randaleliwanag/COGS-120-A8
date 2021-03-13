@@ -28,7 +28,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #6E7687
+    background-color: #6E7687;
     border: none;
 }
 
@@ -42,21 +42,27 @@
     color: white;
 }
 
-.act-pressed, .mood-pressed, .symp-pressed, .med-pressed, .supplement-pressed, .routine-pressed {
+/* Change .supplement-pressed to .sup-pressed */
+.act-pressed, .mood-pressed, .symp-pressed, .med-pressed, .sup-pressed, .routine-pressed {
     background-color: #DDF8F3;
     box-shadow: none;
 }
 
+/* old
 .activity-btn:hover, .mood-btn:hover, .symptom-btn:hover, #add-activity:hover,
 #add-mood:hover, #add-symptom:hover, #add-routine:hover, #add-supplement:hover, #add-med:hover,
-.routine-btn:hover, .supplement-btn:hover, .med-btn:hover {
+.routine-btn:hover, .supplement-btn:hover, .med-btn:hover */
+
+.activity-btn:hover, .mood-btn:hover, .symptom-btn:hover, .add-activity:hover,
+.add-mood:hover, .add-symptom:hover, .add-routine:hover, .add-sup:hover, .add-med:hover,
+.routine-btn:hover, .supplement:hover, .med:hover {
     background-color: #CCF5ED;
     color: #6E7687;
     box-shadow: none;
 }
 
-.activity-btn:active, .mood-btn:active, .symptom-btn:active, #add-activity:active,
-#add-mood:active, #add-symptom:active, #add-routine:active, #add-supplement:active, #add-med:active,
+.activity-btn:active, .mood-btn:active, .symptom-btn:active, .add-activity:active,
+.add-mood:active, .add-symptom:active, .add-routine:active, .add-supplement:active, .add-med:active,
 .routine-btn:active, .supplement-btn:active, .med-btn:active {
     background-color: #BAF2E7;
     color: #6E7687;
@@ -64,7 +70,7 @@
 }
 
 .activity-btn, .mood-btn, .symptom-btn, .routine-btn, .supplement-btn, .med-btn,
-#add-activity, #add-mood, #add-symptom, #add-routine, #add-supplement, #add-med {
+.add-activity, .add-mood, .add-symptom, .add-routine, .add-supplement, .add-med {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -73,7 +79,7 @@
   box-shadow: none;
 }
 
-#add-activity:hover, #add-mood:hover, #add-symptom:hover {
+.add-activity:hover, .add-mood:hover, .add-symptom:hover {
     background-color: #C4E3E9;
     color: #6E7687;
 }
@@ -185,4 +191,43 @@ body {
 #wake {
   max-width: 40%;
   margin: auto;
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 200;
+    color: black;
+    padding: 200px 0;
+    text-align: center;
+}
+
+.splash.display-none {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: -10;
+    color: black;
+    padding: 200px 0;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn .5s ease-in forwards;
 }
