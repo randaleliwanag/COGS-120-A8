@@ -1,11 +1,3 @@
-const splash = document.querySelector(".splash");
-
-document.addEventListener("DOMContentLoaded", (e)=>{
-    setTimeout(()=>{
-        splash.classList.add("display-none");
-    }, 2500);
-})
-
 $("#back").click(function() {
     var yes = confirm("Are you sure? Any unsaved data will be lost.");
     
