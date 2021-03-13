@@ -1,3 +1,11 @@
+const splash = document.querySelector(".splash");
+
+document.addEventListener("DOMContentLoaded", (e)=>{
+    setTimeout(()=>{
+        splash.classList.add("display-none");
+    }, 2500);
+})
+
 $("#back").click(function() {
     var yes = confirm("Are you sure? Any unsaved data will be lost.");
     
@@ -23,12 +31,12 @@ $("#endDayBack").click(function() {
 });
 
 $("#endDay").click(function() {
-    window.alert("Day logged successfully!");
+    window.alert("Day logged successfully! Hope to see you again tomorrow!");
     window.location.href='/index';
 });
 
 $("#signOut").click(function() {
-    var yes = confirm("Sign out?");
+    var yes = confirm("Would you like to sign out?");
     
     if (yes) {
         window.location = "/login";
@@ -46,9 +54,3 @@ $("#routine").click(function() {
     else {
     }
 });
-
-document.addEventListener("DOMContentLoaded", (e)=>{
-    setTimeout(()=>{
-        splash.classList.add("display-none");
-    }, 3000);
-})
