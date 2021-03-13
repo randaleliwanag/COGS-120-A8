@@ -24,6 +24,7 @@
               <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
           </div>
 
+<<<<<<< Updated upstream
           <div class="col"></div>
 
           <div class="col" align="center">
@@ -75,6 +76,67 @@
           <button type="button" class="btn btn-primary" onclick="location.href='/index'" id="save-btn">Exit</button>
       </div>
     </div>
+=======
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col" align="center">
+            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'" id="home-btn"></Button>
+        </div>
+
+        <div class="col"></div>
+
+        <div class="col dropdown" align="center">
+    			<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    				<i class="fas fa-bars"> </i>
+    			</button>
+    			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+                    <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+    				<li><a class="dropdown-item disabled" href="#">Help</a></li>
+    				<div class="dropdown-divider"></div>
+    				<li><a class="dropdown-item" id="signOut">Sign Out</a></li>
+    			</ul>
+		    </div>
+    </div>
+
+    <div class="row align-items-center text-center">
+        <div class="jumbotron">
+            <h1>Today's Summary</h1>
+        </div>
+    </div>
+
+
+    <div class="row text-center">
+        <h3>Summary:</h3>
+    </div>
+
+    <div class="row">
+        <textarea cols="45" rows="5">Today you...</textarea>
+    </div><br>
+
+    <div class="row text-center">
+        <h3>Insights:</h3>
+    </div>
+
+    <div class= "row">
+        <textarea cols="45" rows="5">In order to...</textarea>
+    </div><br>
+
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" id="endDayBack" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
+    </div>
+
+    <div class="col"></div>
+
+    <div class="col text-center">
+        <button type="button" id="endDay" class="btn btn-primary" onclick="location.href='/index'">Log Day</i></button>
+    </div>
+</div>
+
+<script src="/js/alerts.js"></script>
+>>>>>>> Stashed changes
 
 </body>
 </html>
