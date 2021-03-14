@@ -27,12 +27,12 @@ $("#endDayBack").click(function() {
 });
 
 $("#endDay").click(function() {
-    window.alert("Day logged successfully! Hope to see you again tomorrow!");
+    window.alert("Day logged successfully! See you again tomorrow!");
     window.location.href='/index';
 });
 
 $(".signOut").click(function() {
-    var yes = confirm("Are you sure you want to sign out?");
+    var yes = confirm("Do you want to sign out?");
     
     if (yes) {
         window.location = "/login";
