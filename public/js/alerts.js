@@ -35,8 +35,8 @@ $("#endDay").click(function() {
     window.location.href='/index';
 });
 
-$("#signOut").click(function() {
-    var yes = confirm("Would you like to sign out?");
+$(".signOut").click(function() {
+    var yes = confirm("Are you sure you want to sign out?");
     
     if (yes) {
         window.location = "/login";

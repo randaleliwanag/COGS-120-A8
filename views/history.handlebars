@@ -12,13 +12,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
 </head>
-<body class="summary">
-
-<div class="splash">
-	<img src="/images/Mindful.png" class="fade-in" style="max-width: 50%;">
-    <h1 class="fade-in">Generating Summary!</h1>
-</div>
-
+<body>
 <div class="container">
   <div class="row align-items-center">
     <div class="col" align="center">
@@ -33,7 +27,7 @@
 			</button>
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
-				<li><a class="dropdown-item" href="/history">Log History</a></li>
+				<li><a class="dropdown-item" href="/history"Log History</a></li>
 				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
 				<li><a class="dropdown-item disabled" href="#">Help</a></li>
 				<div class="dropdown-divider"></div>
@@ -42,43 +36,42 @@
 		</div>
   </div>
 
-  <div class="row align-items-center text-center">
+  <div class="row align-items-center text-center mt-4">
     <div class="jumbotron">
-        <h1>Today's Overview</h1>
+        <h1>Log History</h1>
     </div>
   </div>
-    <div class="row mb-1">
-        <div align = "center">
-            <h3>Today you...</h3>
+  <hr>
+
+    {{#each log-history}}
+    <div>
+        <div class="row">
+            <h4 align="center" class="mb-4">{{date}}</h4>
+            <p>Woke up at {{wake}}</p>
+            <p>Activity: {{activity}}</p>
+            <p>Mood(s) during activity: {{mood}}</p>
+            {{#if symptom}}
+                <p>Sympom(s) during activity: {{symptom}}</p>
+            {{/if}}
+            <p>Wellness activity: {{wellness}}</p>
+            {{#if supplement}}
+                <p>Supplement(s) taken: {{supplement}}</p>
+            {{/if}}
+            {{#if medication}}
+                <p>Medication(s) taken: {{medication}}</p>
+            {{/if}}
+            <p>Went to bed at {{sleep}}</p>
         </div>
+    <hr>
     </div>
+    {{/each}}
 
-    <div align = "center">
-        <div class="row col-8">
-            <ol>
-                {{#each summary}}
-                <li>Felt {{mood}} when you {{activity}}.</li>
-                    <ul>
-                        <li>Symptoms: {{symptom}}</li>
-                    </ul>
-                    <br>
-                {{/each}}
-            </ol>
-            
-        </div>
-    </div><br>
-
-
-    <div class = "pull-left mb-4">
-        <button type="button" id="endDayBack" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back</button>
-    </div>
 
     <div class = "pull-right mb-4">
-        <button type="button" id="endDay" class="btn btn-primary">Log Day</i></button>
+        <button type="button" class="btn btn-primary" onclick="location.href='/index'">Done</i></button>
     </div>
 </div>
  
-<script src="/js/alerts.js"></script> 
 
 </body>
 </html>

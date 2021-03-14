@@ -5,14 +5,10 @@
   <title>Mindful</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery.js"></script>
-    {{!-- <script src="js/jquery-1.11.0.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    {{!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> --}}
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad7c6dd9ef.js" crossorigin="anonymous"></script>
-    {{!-- <link href="/css/bootstrap.css" rel="stylesheet"> --}}
-    {{!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="/css/styles.css">
 
 </head>
@@ -32,11 +28,11 @@
 			</button>
 			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
-				<li><a class="dropdown-item disabled" href="#">Log History</a></li>
+				<li><a class="dropdown-item" href="/history">Log History</a></li>
 				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
 				<li><a class="dropdown-item disabled" href="#">Help</a></li>
 				<div class="dropdown-divider"></div>
-				<li><a class="dropdown-item" href="/login">Sign Out</a></li>
+				<li><a class="dropdown-item signOut" href="/login">Sign Out</a></li>
 			</ul>
 		</div>
   </div>
@@ -65,7 +61,6 @@
           {{#each mood}}
           <button type="button" class="btn btn-light mood-btn">{{this}}</button>
           {{/each}}
-          {{!-- <button type="button" class="btn btn-light add-mood" id="add-mood">Add <i class="fas fa-plus"></i></button> --}}
 
     </div>
 
@@ -77,10 +72,8 @@
         {{#each symptom}}
         <button type="button" class="btn btn-light symptom-btn">{{this}}</button>
         {{/each}}
-        {{!-- <button type="button" class="btn btn-light" id="add-symptom">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
-        {{!-- Button should be submit type I think --}}
     <div class="row">
       <div class="col text-center">
           <button type="button" class="btn btn-primary back" id="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
@@ -89,14 +82,13 @@
       <div class="col"></div>
 
       <div class="col text-center">
-          {{!-- removed the onclick --}}
           <button type="button" class="btn btn-primary log-data" id="save-btn">Save</button>
       </div>
     </div>
 </div>
 
 <script src="../js/end.js"></script> 
-<script src="/js/alerts.js"></script>
+<script src="../js/alerts.js"></script>
 
 </body>
 </html>
