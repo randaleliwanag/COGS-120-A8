@@ -4,17 +4,17 @@
 	<title>Mindful</title>
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/ad7c6dd9ef.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="/css/styles.css">
+	
 </head>
 
 <body>
 	<div class="container">
-		<div align="center">
-			<h1>Under Construction</h1>
-		</div>
 		<div class="title-header">
 			<div class="row">
 				<div class="col-6 offset-3 jumbotron">
@@ -46,15 +46,25 @@
 
 			<div class="form-group col-sm-8 col-md-6 col-lg-4 col-8 mt-3 mx-auto">
 				<label>Confirm Password</label>
-				<input type="password" class="form-control" id="Password" placeholder="Confirm Password">
-			</div><br>
-
-			<div align="center">
-				<button type = "button" class="btn btn-primary" onclick="location.href='/login'">Cancel</button>
-            	<button type = "button" class="btn btn-primary" onclick="location.href='/index'">Submit</button><br><br>
+				<input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
 			</div>
 		</form>
+
+		<div class="row">
+			<div class="col text-center">
+				<button type="button" id="signUpBack" class="btn btn-primary">Cancel</button>
+			</div>
+
+			<div class="col"></div>
+
+			<div class="col text-center">
+				<button type="button" id="signUp" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+
 	</div>
+
+	<script src="/js/alerts.js"></script> 
 
 </body>
 </html>
