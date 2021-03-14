@@ -1,18 +1,16 @@
-// $(function() {
-//     $('.insert-nav').load('https://cogs120--a7.herokuapp.com/nav-bar')
-// })
+nav = `
+	<button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+		<i class="fas fa-bars"> </i>
+	</button>
+	<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+		<li><a class="dropdown-item disabled" href="#">Profile</a></li>
+		<li><a class="dropdown-item" href="/history">Log History</a></li>
+		<li><a class="dropdown-item disabled" href="#">Settings</a></li>
+		<li><a class="dropdown-item disabled" href="#">Help</a></li>
+		<div class="dropdown-divider"></div>
+		<li><a class="dropdown-item signOut">Sign Out</a></li>
+	</ul>
+`
 
-// Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
-	initializePage();
-});
-
-/*
- * Function that is called when the document is ready.
- */
-function initializePage() {
-	// your code here
-	$(function(){
-        $("#nav-bar").load("https://cogs120--a7.herokuapp.com/nav-bar"); 
-      });
-}
+// Insert the dropdown menu into "drop" class
+$(".drop").append(nav);
