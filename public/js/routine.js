@@ -59,7 +59,6 @@ function addUserData() {
         }
 
         console.log(data)
-        // Now I gotta figure out what to do with this data...
 
         window.location.href="/index"
     })

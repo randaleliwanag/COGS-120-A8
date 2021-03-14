@@ -1,0 +1,22 @@
+{"summary": [
+    {
+        "activity": "worked",
+        "mood": "annoyed",
+        "symptom": "Headache" 
+    },
+    {
+        "activity": "read",
+        "mood": "indifferent",
+        "symptom": "Fatigue" 
+    },
+    {
+        "activity": "meditated",
+        "mood": "calm and relaxed",
+        "symptom": "None" 
+    },
+    {
+        "activity": "visited a friend",
+        "mood": "excited and happy",
+        "symptom": "None" 
+    }
+]}

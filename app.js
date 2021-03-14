@@ -10,17 +10,13 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 // Example route
-// var activity = require('./routes/activity');
 var login = require('./routes/login')
 var signup = require('./routes/signup')
 var splash = require('./routes/splash')
-// var wellness = require('./routes/wellness')
-// var start = require('./routes/start')
-// var end = require('./routes/end')
 var getData = require('./routes/getData')
 var summary = require('./routes/summary')
 var navBar = require('./routes/nav-bar')
-// var routine = require('./routes/routine')
+var history = require('./routes/history')
 
 var app = express();
 
@@ -47,7 +43,6 @@ if ('development' == app.get('env')) {
 app.get('/', splash.view)
 app.get('/login', login.view)
 app.get('/index', index.view);
-// app.get('/activity', activity.view)
 app.get('/activity', getData.viewActivity)
 app.get('/editRoutine', getData.vieweditRoutine)
 app.get('/signup', signup.view)
@@ -58,6 +53,7 @@ app.get('/data/:page', getData.showData)
 app.get('/summary', summary.view)
 app.get('/routine', getData.viewWellness)
 app.get('/nav-bar', navBar.view)
+app.get('/history', history.view)
 // Example route
 // app.get('/users', user.list);
 

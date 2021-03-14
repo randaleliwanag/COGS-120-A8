@@ -42,7 +42,6 @@ function addUserData() {
 
         data = {
             date: todayDate.toDateString(),
-            // activity: activities,
             mood: moods,
             symptom: symptoms
         }

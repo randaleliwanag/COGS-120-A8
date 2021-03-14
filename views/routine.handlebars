@@ -5,14 +5,10 @@
   <title>Mindful</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery.js"></script>
-    {{!-- <script src="js/jquery-1.11.0.js"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    {{!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> --}}
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ad7c6dd9ef.js" crossorigin="anonymous"></script>
-    {{!-- <link href="/css/bootstrap.css" rel="stylesheet"> --}}
-    {{!-- <link href="/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="/css/styles.css">
 
 </head>
@@ -31,11 +27,11 @@
     			</button>
     			<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     				<li><a class="dropdown-item disabled" href="#">Profile</a></li>
-                    <li><a class="dropdown-item disabled" href="#">Log History</a></li>
+                    <li><a class="dropdown-item" href="/history">Log History</a></li>
     				<li><a class="dropdown-item disabled" href="#">Settings</a></li>
     				<li><a class="dropdown-item disabled" href="#">Help</a></li>
     				<div class="dropdown-divider"></div>
-    				<li><a class="dropdown-item" href="/">Sign Out</a></li>
+    				<li><a class="dropdown-item signOut" href="/login">Sign Out</a></li>
     			</ul>
     		</div>
     </div>
@@ -55,7 +51,6 @@
         {{#each wellness}}
         <button type="button" class="btn btn-light routine-btn">{{this}}</button>
         {{/each}}
-        {{!-- <button type="button" class="btn btn-light add-routine" id="add-routine">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
 
@@ -67,14 +62,6 @@
         {{#each supplements}}
         <button type="button" class="btn btn-light supplement-btn">{{this}}</button>
         {{/each}}
-        {{!-- <button type="button" class="btn btn-light add-supplement" id="add-supplement">Add <i class="fas fa-plus"></i></button> --}}
-
-        {{!-- These are the original face buttons. Not sure if we are going to keep them or remove them. --}}
-        {{!-- <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-sad-tear fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-frown fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-meh fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-smile fa-2x"></button></div>
-        <div class="col-1 text-center"><button type="button" class="btn btn-light far fa-laugh-beam fa-2x"></button></div> --}}
     </div>
 
 
@@ -86,7 +73,6 @@
         {{#each medication}}
         <button type="button" class="btn btn-light med-btn">{{this}}</button>
         {{/each}}
-        {{!-- <button type="button" class="btn btn-light" id="add-med">Add <i class="fas fa-plus"></i></button> --}}
     </div>
 
     <div class = "row">
@@ -100,24 +86,6 @@
         <button type="button" class="btn btn-primary log-data" id="save-btn">Save</button>
       </div>
     </div>
-
-        {{!-- <div class="row justify-content-around">
-            <div class="col-4 text-center my-3">
-                <button type="button" class="btn btn-primary" onclick="location.href='/index'"><i class="fas fa-arrow-left"></i> Back</button>
-            </div>
-
-            <div class="col-4 text-center my-3">
-                <button type="button" class="btn btn-primary">Next <i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div> --}}
-
-
-    {{!-- <div class="row justify-content-center my-5">
-        <div class="col-5 text-center">
-            <button class="btn btn-lg btn-secondary fas fa-home" onclick="location.href='/index'"></Button>
-        </div>
-    </div> --}}
-
 
 
 </div>
