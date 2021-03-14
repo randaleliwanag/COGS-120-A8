@@ -1,11 +1,3 @@
-const splash = document.querySelector(".splash");
-
-document.addEventListener("DOMContentLoaded", (e)=>{
-    setTimeout(()=>{
-        splash.classList.add("display-none");
-    }, 2500);
-})
-
 $(".back").click(function() {
     var yes = confirm("Are you sure? Any unsaved data will be lost.");
     
@@ -15,10 +7,6 @@ $(".back").click(function() {
     else {
     }
 });
-
-//$("#save").click(function() {
-    //alert("Data saved successfully!");
-//});
 
 $("#endDayBack").click(function() {
     var yes = confirm("Are you sure? Day will not be logged.");
@@ -31,12 +19,27 @@ $("#endDayBack").click(function() {
 });
 
 $("#endDay").click(function() {
-    window.alert("Day logged successfully! Hope to see you again tomorrow!");
+    window.alert("Day logged successfully! See you again tomorrow!");
     window.location.href='/index';
 });
 
 $(".signOut").click(function() {
-    var yes = confirm("Are you sure you want to sign out?");
+    var yes = confirm("Do you want to sign out?");
+    
+    if (yes) {
+        window.location = "/login";
+    }
+    else {
+    }
+});
+
+$("#signUp").click(function() {
+    window.alert("Account creation successful!");
+    window.location.href='/index';
+});
+
+$("#signUpBack").click(function() {
+    var yes = confirm("Are you sure? Acount information will not be saved.");
     
     if (yes) {
         window.location = "/login";

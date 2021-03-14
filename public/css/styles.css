@@ -178,9 +178,6 @@ h3 {
 }
 
 body {
-  /*background: rgb(235,245,247);
-  background: linear-gradient(180deg, rgba(235,245,247,1) 0%, rgba(243,249,250,1) 10%, rgba(255,255,255,1) 100%);*/
-
   background: rgb(243,249,250);
   background: linear-gradient(180deg, rgba(243,249,250,1) 0%, rgba(249,252,252,1) 10%, rgba(255,255,255,1) 100%);
   background-repeat: no-repeat;
@@ -229,5 +226,5 @@ body {
 
 .fade-in {
     opacity: 0;
-    animation: fadeIn .5s ease-in forwards;
+    animation: fadeIn .75s ease-in forwards;
 }
