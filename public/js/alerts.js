@@ -16,10 +16,6 @@ $(".back").click(function() {
     }
 });
 
-//$("#save").click(function() {
-    //alert("Data saved successfully!");
-//});
-
 $("#endDayBack").click(function() {
     var yes = confirm("Are you sure? Day will not be logged.");
     
